@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" [class.mat-elevation-z8]="true">
+
+    <div class="relative-margin-left">
+        <button class="custom-margin-left" mat-icon-button (click)="menuClick.emit()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{companyName}}</span>
+    </div>
+
+    <span class="spacer"></span>
+
+    <div class="relative-margin-right">
+        <button mat-icon-button [matMenuTriggerFor]="userCard">
+            <img mat-card-avatar src={{avatar?.imgUrl}} />
+        </button>
+    </div>
+
+    <mat-menu class="mat-menu" #userCard>
+        <mat-card class="user-card">
+
+            <img src={{avatar?.bgUrl}} />
+
+            <div class="display-center">
+                <img class="user-card-avatar-img" mat-card-avatar src={{avatar?.imgUrl}} />
+            </div>
+
+            <mat-card-header class="user-card-header display-center">
+                <mat-card-title>{{user?.surname}}, {{user?.name}}</mat-card-title>
+                <mat-card-subtitle>
+                    <div class="display-center">
+                        {{user?.companyTitle}}
+                    </div>
+                </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-content>
+
+                <mat-nav-list dense>
+                    <div *ngFor="let userMenuSection of userMenuSections">
+                        <mat-divider></mat-divider>
+                        <p mat-subheader>{{userMenuSection?.label}}</p>
+                        <mat-list-item *ngFor="let item of userMenuSection.items">
+                            <p matLine class="full-text">{{item?.label}}</p>
+                        </mat-list-item>
+                    </div>
+                </mat-nav-list>
+
+            </mat-card-content>
+        </mat-card>
+    </mat-menu>
+</mat-toolbar>

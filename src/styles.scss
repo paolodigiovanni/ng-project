@@ -1,4 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.relative-margin-left {
+    position: relative;
+    margin-left: 10%;
+}
+
+.relative-margin-right {
+    position: relative;
+    margin-right: 10%;
+}
+
+.full-text {
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+}
+
+.display-center {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+// .test {
+//     background: conic-gradient(red 0deg 90deg, blue 90deg 270deg, red 270deg 360deg);
+// }

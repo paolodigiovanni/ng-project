@@ -1,0 +1,57 @@
+mat-toolbar {
+    padding: 0;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+::ng-deep .mat-menu-content:not(:empty) {
+    padding: 0 !important;
+}
+
+::ng-deep mat-list.mat-list-base {
+    padding: 0;
+}
+
+::ng-deep .mat-menu.mat-menu-panel {
+    margin-top: 8px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+@media (max-width: 599px) {
+    ::ng-deep .mat-menu.mat-menu-panel {
+        margin-top: 4px;
+        max-width: 300px;
+        min-width: 300px;
+    }
+}
+
+.custom-margin-left {
+    margin-left: -8% !important;
+}
+
+.user-card {
+    padding: 0;
+}
+
+.user-card>:nth-child(1) {
+    height: 64px;
+    width: 100%;
+}
+
+.user-card-header {
+    padding-top: 16px;
+}
+
+.user-card-avatar-img {
+    margin-top: -40px;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #fff;
+}
+
+.mat-list-base[dense] .mat-subheader {
+    font-size: 16px;
+}

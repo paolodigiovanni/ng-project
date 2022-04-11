@@ -1,0 +1,32 @@
+<div *ngIf="sidebarSections.length > 1; then sectionMultiple; else sectionSingle"></div>
+
+<ng-template #sectionMultiple>
+    <mat-accordion>
+        <mat-expansion-panel class="mat-expansion-panel-custom" [class.mat-elevation-z0]="true" dense
+            *ngFor="let sidebarSection of sidebarSections">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{sidebarSection?.label}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list dense>
+                <mat-list-item *ngFor="let sectionItem of sidebarSection?.items">
+                    <mat-icon matListIcon>{{sectionItem?.icon}}</mat-icon>
+                    <p matLine class="full-text">{{sectionItem?.label}}</p>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+</ng-template>
+
+<ng-template #sectionSingle>
+    <mat-panel-title class="mat-expansion-panel-header-custom">
+        {{sidebarSections[0]?.label}}
+    </mat-panel-title>
+    <mat-nav-list dense>
+        <mat-list-item *ngFor="let sectionItem of sidebarSections[0]?.items">
+            <mat-icon matListIcon>{{sectionItem?.icon}}</mat-icon>
+            <p matLine class="full-text">{{sectionItem?.label}}</p>
+        </mat-list-item>
+    </mat-nav-list>
+</ng-template>
