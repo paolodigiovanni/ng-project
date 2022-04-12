@@ -32,26 +32,6 @@ mat-toolbar {
     margin-left: -8% !important;
 }
 
-.user-card {
-    padding: 0;
-}
-
-.user-card>:nth-child(1) {
-    height: 64px;
-    width: 100%;
-}
-
-.user-card-header {
-    padding-top: 16px;
-}
-
-.user-card-avatar-img {
-    margin-top: -40px;
-    width: 64px;
-    height: 64px;
-    border: 1px solid #fff;
-}
-
 .mat-list-base[dense] .mat-subheader {
     font-size: 16px;
 }

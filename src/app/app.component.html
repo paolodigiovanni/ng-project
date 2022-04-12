@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container" (backdropClick)="sidenav.close()">
   <mat-sidenav-content>
-    <app-header [companyName]="companyName" (menuClick)="sidenav.open()"></app-header>
+    <app-header [companyName]="companyName" (sidebarButtonClick)="sidenav.open()"></app-header>
     <div class="relative-margin-left relative-margin-right">
       <router-outlet></router-outlet>
     </div>
